@@ -25,7 +25,7 @@ jobs:
         run: docker push techie019/cardsys:app1v1
 
   deploy:
-    runs-on: self-hosted
+    runs-on: [self-hosted, Linux, X64]
     needs: build-and-push
 
     steps:
