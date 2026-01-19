@@ -24,4 +24,9 @@ public class GreetController {
         String app2Response = restTemplate.getForObject("http://app2-service:8082/docker", String.class);
         return "App1 received: " + app2Response;
     }
+    
+    @GetMapping("/test")
+    public String test() {
+    	return "hi this is from test call";
+    }
 }
