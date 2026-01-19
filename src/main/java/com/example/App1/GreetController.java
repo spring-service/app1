@@ -21,7 +21,7 @@ public class GreetController {
     @GetMapping("/esakki")
     public String greetings() {
         // Call App2
-        String app2Response = restTemplate.getForObject("http://app2-service:8082/Docker", String.class);
+        String app2Response = restTemplate.getForObject("http://app2-service:8082/docker", String.class);
         return "App1 received: " + app2Response;
     }
 }
