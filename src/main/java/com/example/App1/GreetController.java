@@ -27,6 +27,6 @@ public class GreetController {
     
     @GetMapping("/test")
     public String test() {
-    	return "hi this is from test call again updated.";
+    	return "hi this is from test call again updated";
     }
 }
