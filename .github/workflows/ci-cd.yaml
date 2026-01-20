@@ -8,5 +8,9 @@ jobs:
   deploy:
     uses: spring-service/ci-templates/.github/workflows/docker-k8s-deploy.yml@main
     with:
-      app_name: app1
       image_name: techie019/cardsys:app1v1
+      app_name: app1
+    secrets:
+      DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+      DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+
